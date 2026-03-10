@@ -1,0 +1,69 @@
+{% extends 'pub/base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title" data-en="Contact Us" data-sk="Kontaktujte nás">Contact Us</h1>
+        <p class="page-subtitle" data-en="Come visit us or get in touch" data-sk="Príďte nás navštíviť alebo nás kontaktujte">Come visit us or get in touch</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="contact-grid">
+
+            <div class="contact-info-panel">
+                <div class="contact-block">
+                    <h3 data-en="Address" data-sk="Adresa">Address</h3>
+                    <p>Bočná 411/9</p>
+                    <p>Košice, Slovakia</p>
+                </div>
+
+                <div class="contact-block">
+                    <h3 data-en="Phone" data-sk="Telefón">Phone</h3>
+                    <p><a href="tel:+421940117925">+421 940 117 925</a></p>
+                </div>
+
+                <div class="contact-block">
+                    <h3 data-en="Opening Hours" data-sk="Otváracie hodiny">Opening Hours</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <td data-en="Monday – Thursday" data-sk="Pondelok – Štvrtok">Monday – Thursday</td>
+                            <td>16:00 – 00:00</td>
+                        </tr>
+                        <tr>
+                            <td data-en="Friday" data-sk="Piatok">Friday</td>
+                            <td>16:00 – 02:00</td>
+                        </tr>
+                        <tr>
+                            <td data-en="Saturday" data-sk="Sobota">Saturday</td>
+                            <td>14:00 – 02:00</td>
+                        </tr>
+                        <tr>
+                            <td data-en="Sunday" data-sk="Nedeľa">Sunday</td>
+                            <td>14:00 – 23:00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="contact-map">
+                <iframe
+                    src="https://maps.google.com/maps?q=48.718974,21.256829&z=17&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0; border-radius: 12px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'pub/base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1 class="hero-title">Memories <span>Pub</span></h1>
+        <p class="hero-subtitle" data-en="Chill bar in the heart of Košice" data-sk="Pohodový bar v srdci Košíc">Chill bar in the heart of Košice</p>
+        <div class="hero-buttons">
+            <a href="{% url 'drinks' %}" class="btn btn-primary" data-en="View Drinks" data-sk="Pozrieť nápoje">View Drinks</a>
+            <a href="{% url 'contact' %}" class="btn btn-outline" data-en="Visit Us" data-sk="Navštívte nás">Visit Us</a>
+        </div>
+        <p class="hero-demo-note" data-en="Demo website concept for Memories Pub" data-sk="Demo koncept webstránky pre Memories Pub">Demo website concept for Memories Pub</p>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <div class="container">
+        <h2 class="section-title" data-en="Our Atmosphere" data-sk="Naša atmosféra">Our Atmosphere</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="about-icon">&#127866;</div>
+                <h3 data-en="Craft Drinks" data-sk="Remeselné nápoje">Craft Drinks</h3>
+                <p data-en="Cold draft beers, signature cocktails, and premium spirits served with care." data-sk="Studené čapované pivá, originálne koktaily a prémiové destiláty podávané s láskou.">Cold draft beers, signature cocktails, and premium spirits served with care.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">&#127925;</div>
+                <h3 data-en="Great Vibes" data-sk="Skvelá atmosféra">Great Vibes</h3>
+                <p data-en="Warm lighting, good music, and a welcoming space where everyone feels at home." data-sk="Teplé osvetlenie, dobrá hudba a príjemný priestor, kde sa každý cíti ako doma.">Warm lighting, good music, and a welcoming space where everyone feels at home.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">&#129309;</div>
+                <h3 data-en="Friendly People" data-sk="Priateľskí ľudia">Friendly People</h3>
+                <p data-en="Come alone or with friends — you'll always find good company and conversations." data-sk="Príďte sami alebo s priateľmi — vždy nájdete dobrú spoločnosť a rozhovory.">Come alone or with friends — you'll always find good company and conversations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-dark" id="entertainment-preview">
+    <div class="container">
+        <h2 class="section-title" data-en="Entertainment" data-sk="Zábava">Entertainment</h2>
+        <p class="section-subtitle" data-en="More than just drinks — we've got games and fun for everyone." data-sk="Nielen nápoje — máme hry a zábavu pre každého.">More than just drinks — we've got games and fun for everyone.</p>
+        <div class="entertainment-grid">
+            <div class="ent-card">
+                <div class="ent-icon">&#127921;</div>
+                <h3 data-en="Billiard Tables" data-sk="Biliardové stoly">Billiard Tables</h3>
+                <p data-en="Challenge your friends to a game of pool on our well-maintained tables." data-sk="Vyzvite priateľov na partiu biliardovom stole.">Challenge your friends to a game of pool on our well-maintained tables.</p>
+            </div>
+            <div class="ent-card">
+                <div class="ent-icon">&#127919;</div>
+                <h3 data-en="Steel Darts" data-sk="Oceľové šípky">Steel Darts</h3>
+                <p data-en="Show off your aim with professional steel dartboards." data-sk="Ukážte svoju mušku na profesionálnych oceľových terčoch.">Show off your aim with professional steel dartboards.</p>
+            </div>
+            <div class="ent-card">
+                <div class="ent-icon">&#127918;</div>
+                <h3 data-en="PlayStation Gaming" data-sk="PlayStation hranie">PlayStation Gaming</h3>
+                <p data-en="Grab a controller and play the latest games on our big screen." data-sk="Chyťte ovládač a hrajte najnovšie hry na našej veľkej obrazovke.">Grab a controller and play the latest games on our big screen.</p>
+            </div>
+            <div class="ent-card">
+                <div class="ent-icon">&#127942;</div>
+                <h3 data-en="Regular Tournaments" data-sk="Pravidelné turnaje">Regular Tournaments</h3>
+                <p data-en="Join our weekly tournaments in darts, billiards, and gaming." data-sk="Zúčastnite sa našich týždenných turnajov v šípkach, biliarde a hraní.">Join our weekly tournaments in darts, billiards, and gaming.</p>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 2.5rem;">
+            <a href="{% url 'entertainment' %}" class="btn btn-primary" data-en="See All Entertainment" data-sk="Zobraziť všetku zábavu">See All Entertainment</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

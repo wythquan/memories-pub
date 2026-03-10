@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Memories Pub{% endblock %} | Košice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'pub/css/style.css' %}">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="{% url 'home' %}" class="nav-logo">Memories<span>Pub</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="{% url 'home' %}" class="nav-link" data-en="Home" data-sk="Domov">Home</a></li>
+                <li><a href="{% url 'drinks' %}" class="nav-link" data-en="Drinks" data-sk="Nápoje">Drinks</a></li>
+                <li><a href="{% url 'entertainment' %}" class="nav-link" data-en="Entertainment" data-sk="Zábava">Entertainment</a></li>
+                <li><a href="{% url 'contact' %}" class="nav-link" data-en="Contact" data-sk="Kontakt">Contact</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="sk">SK</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Memories<span>Pub</span></h3>
+                    <p data-en="Your favorite spot in the heart of Košice." data-sk="Vaše obľúbené miesto v srdci Košíc.">Your favorite spot in the heart of Košice.</p>
+                </div>
+                <div class="footer-info">
+                    <h4 data-en="Address" data-sk="Adresa">Address</h4>
+                    <p>Bočná 411/9, Košice</p>
+                    <p>Slovakia</p>
+                </div>
+                <div class="footer-info">
+                    <h4 data-en="Contact" data-sk="Kontakt">Contact</h4>
+                    <p><a href="tel:+421940117925">+421 940 117 925</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-en="Demo website design" data-sk="Demo dizajn webstránky">Demo website design</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'pub/js/main.js' %}"></script>
+</body>
+</html>
